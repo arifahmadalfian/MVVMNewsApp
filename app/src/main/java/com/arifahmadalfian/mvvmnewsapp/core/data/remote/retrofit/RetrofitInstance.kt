@@ -1,4 +1,4 @@
-package com.arifahmadalfian.mvvmnewsapp.core.data.remote.network
+package com.arifahmadalfian.mvvmnewsapp.core.data.remote.retrofit
 
 import com.arifahmadalfian.mvvmnewsapp.core.utils.Constants.BASE_URL
 import okhttp3.OkHttpClient

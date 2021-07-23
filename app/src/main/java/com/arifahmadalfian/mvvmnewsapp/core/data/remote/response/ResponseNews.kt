@@ -8,7 +8,7 @@ data class ResponseNews<T>(
 	val totalResults: Int,
 
 	@field:SerializedName("articles")
-	val articles: List<T>,
+	val articles: T,
 
 	@field:SerializedName("status")
 	val status: String
