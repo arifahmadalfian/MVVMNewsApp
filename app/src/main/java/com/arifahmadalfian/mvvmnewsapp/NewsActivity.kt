@@ -2,16 +2,31 @@ package com.arifahmadalfian.mvvmnewsapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.navigation.fragment.findNavController
+import androidx.navigation.Navigation
 import androidx.navigation.ui.setupWithNavController
-import kotlinx.android.synthetic.main.news_activity.*
+import com.arifahmadalfian.mvvmnewsapp.databinding.NewsActivityBinding
 
 class NewsActivity : AppCompatActivity() {
 
+    private var _binding: NewsActivityBinding? = null
+    private val binding get() = _binding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.news_activity)
+        _binding = NewsActivityBinding.inflate(layoutInflater)
+        setContentView(binding?.root)
 
-        bottomNavigationView.setupWithNavController(newsNavHostFragment.findNavController())
+        // id dari fragment tidak bisa di binding
+        // berpindah dengan menggunakan kode (Navigation.findNavController(this, id fragment di xml))
+        // kalau menggunakan kotlin sintetyc bisa dengan newsNavHostFragment.findNavControler()
+        binding?.bottomNavigationView
+            ?.setupWithNavController(
+                Navigation.findNavController(this, R.id.newsNavHostFragment)
+            )
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 }

@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.arifahmadalfian.mvvmnewsapp.core.data.local.converters.Converters
-import com.arifahmadalfian.mvvmnewsapp.core.data.local.entity.Articles
+import com.arifahmadalfian.mvvmnewsapp.core.model.Articles
 
 @TypeConverters(
     Converters::class

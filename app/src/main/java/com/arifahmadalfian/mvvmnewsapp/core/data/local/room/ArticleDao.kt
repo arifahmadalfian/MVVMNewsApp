@@ -2,7 +2,7 @@ package com.arifahmadalfian.mvvmnewsapp.core.data.local.room
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.arifahmadalfian.mvvmnewsapp.core.data.local.entity.Articles
+import com.arifahmadalfian.mvvmnewsapp.core.model.Articles
 
 @Dao
 interface ArticleDao {

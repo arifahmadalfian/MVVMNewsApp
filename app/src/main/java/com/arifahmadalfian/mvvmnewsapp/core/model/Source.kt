@@ -1,4 +1,4 @@
-package com.arifahmadalfian.mvvmnewsapp.core.data.remote.response
+package com.arifahmadalfian.mvvmnewsapp.core.model
 
 import com.google.gson.annotations.SerializedName
 

@@ -1,7 +1,7 @@
 package com.arifahmadalfian.mvvmnewsapp.core.data.local.converters
 
 import androidx.room.TypeConverter
-import com.arifahmadalfian.mvvmnewsapp.core.data.local.entity.Source
+import com.arifahmadalfian.mvvmnewsapp.core.model.Source
 
 class Converters {
 

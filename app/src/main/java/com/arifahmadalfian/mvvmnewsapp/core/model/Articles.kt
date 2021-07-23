@@ -1,8 +1,13 @@
-package com.arifahmadalfian.mvvmnewsapp.core.data.remote.response
+package com.arifahmadalfian.mvvmnewsapp.core.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
-data class ArticlesItem(
+@Entity(
+    tableName = "articles"
+)
+data class Articles(
 
     @field:SerializedName("publishedAt")
     val publishedAt: String,
@@ -27,4 +32,9 @@ data class ArticlesItem(
 
     @field:SerializedName("content")
     val content: String
-)
+){
+
+    @PrimaryKey(autoGenerate = true)
+    var id: Int? = null
+
+}
